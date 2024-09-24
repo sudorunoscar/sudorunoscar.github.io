@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating System Detector</title>
+</head>
+<body>
+    <h1 id="os-detector"></h1>
+
+    <script>
+        const userAgent = navigator.userAgent;
+        const osDetector = document.getElementById('os-detector');
+
+        if (userAgent.match(/Linux/i)) {
+            osDetector.textContent = 'You are using Linux.';
+        } else if (userAgent.match(/Mac OS X/i)) {
+            osDetector.textContent = 'You are using MacOS.';
+        } else if (userAgent.match(/Win/i)) {
+            osDetector.textContent = 'You are using Windows.';
+        } else {
+            osDetector.textContent = 'Unable to detect your operating system.';
+        }
+    </script>
+</body>
+</html>
